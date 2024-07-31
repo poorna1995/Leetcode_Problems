@@ -24,3 +24,10 @@ class solution:
 
 
 print(solution().duplicateNumber(number))
+
+
+
+def duplication(number):
+    return len(set(number)) != len(number)
+
+print(duplication(number))

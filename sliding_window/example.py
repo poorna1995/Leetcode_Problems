@@ -62,5 +62,33 @@ def stock(prices):
         
 
 
-prices=[10,1,5,6,7,1] 
+# prices=[10,1,5,6,7,1] 
+prices =[7,1,5,3,6,4]
 print(stock(prices))
+
+
+def buyStock(prices):
+    max_profit = float('-inf')
+    min_price = float('inf')
+
+    for price in prices:
+        min_price = min(price,min_price )
+        max_profit=max(max_profit, price - min_price )
+
+    return max_profit
+print(buyStock(prices))
+
+
+def butstock(prices):
+    buy = prices[0]
+    profit =0
+    for price in prices:
+        if price < buy:
+            buy=price
+        elif (price-buy) > profit:
+            profit = price-buy
+    return profit
+
+
+
+

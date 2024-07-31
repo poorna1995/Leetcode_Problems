@@ -31,6 +31,7 @@ class solution:
         for i in range(len(s)):
             CountS[s[i]] = CountS.get(s[i], 0) + 1
             CountT[t[i]] = CountT.get(t[i], 0) + 1
+            print(CountS,CountT)
         return CountS == CountT
 
 
