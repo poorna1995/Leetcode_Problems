@@ -42,20 +42,55 @@
 # target = 9
 
 # print(solution().twoSum(nums, target))
-nums=[2.4,12,11,10]
+nums=[2,4,12,11,10]
 target=13
+def twoSum(nums,target):
+    for num in nums:
+        diff = target - num
+        if diff in nums:
+            return True
+    return False
+
+print(twoSum(nums,target))
 
 
-class solution:
-    def twoSum(self, nums,target):
-        emptyset={}
-        for i,n in enumerate(nums):
-            diff = target - n
-            if diff in emptyset:
-                return (emptyset[diff],i)
-            emptyset[n]=i
+def positionTwoSum(nums,target):
+    emptySet={}
+    for i,num in enumerate(nums):
+        diff = target - num
+        if diff in emptySet:
+            return (emptySet[diff],i)
+        emptySet[num] = i
+    return 0
 
-print (solution().twoSum(nums,target))
+print(positionTwoSum(nums,target))
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

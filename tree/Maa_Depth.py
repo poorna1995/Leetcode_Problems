@@ -24,7 +24,6 @@ class solution:
     def MaxDepth(self,root):
         if root is None:
             return 0
-        
         level=1
         q= deque([root])
         while q:
